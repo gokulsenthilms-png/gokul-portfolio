@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Demos | GOKUL S</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="demo-page">
+  <header class="navbar">
+    <a href="index.html" class="logo">GOKUL S<span>.</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects" class="active-link">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="demo-heading section">
+      <p class="eyebrow">INTERACTIVE PROJECTS</p>
+      <h1>Project <span>Demos</span></h1>
+      <p>Choose a project below to try its demo. These browser demos show the interface and basic behaviour; they do not run the original Java or Python programs.</p>
+      <a href="index.html#projects" class="btn secondary-btn">← Back to Portfolio</a>
+    </section>
+
+    <section class="section demo-section" id="tax-demo">
+      <div class="demo-title">
+        <p class="project-number">PROJECT 01 · JAVA CONCEPT</p>
+        <h2>Income Tax Estimation and Detection System</h2>
+        <p>GUI-style demo: enter a sample annual income and use the buttons to display a result.</p>
+      </div>
+      <div class="tax-app app-panel">
+        <div class="app-topbar">
+          <span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span>
+          <strong>Income Tax System</strong>
+        </div>
+        <div class="app-body">
+          <label for="annualIncome">Annual income (₹)</label>
+          <input id="annualIncome" type="number" min="0" step="1000" placeholder="Example: 800000">
+          <div class="button-row">
+            <button class="btn primary-btn" id="estimateTax">Estimate Tax</button>
+            <button class="btn secondary-btn" id="detectTax">Detection</button>
+          </div>
+          <div id="taxResult" class="result-box" role="status" aria-live="polite">Enter an income and choose an action.</div>
+          <p class="demo-disclaimer">Illustrative demo only, using a simplified sample calculation—not an official tax calculator. It does not represent the original Java project's exact rules.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="bank-demo">
+      <div class="demo-title">
+        <p class="project-number">PROJECT 02 · PYTHON</p>
+        <h2>Python Bank System</h2>
+        <p>Console-style choice menu, like a menu-driven Python program.</p>
+      </div>
+      <div class="console-panel">
+        <div class="console-header"><span>●</span> bank_system.py — demo terminal</div>
+        <div class="console-output" id="bankOutput" role="status" aria-live="polite">
+Welcome to Python Bank System
+1. Add Account
+2. Deposit
+3. Withdraw
+4. Check Balance
+5. Calculate Interest
+6. Account Details
+7. Exit
+
+Select an option below to continue.
+        </div>
+        <div class="console-controls">
+          <label for="bankChoice">Enter choice (1–7)</label>
+          <select id="bankChoice">
+            <option value="1">1 — Add Account</option>
+            <option value="2">2 — Deposit</option>
+            <option value="3">3 — Withdraw</option>
+            <option value="4">4 — Check Balance</option>
+            <option value="5">5 — Calculate Interest</option>
+            <option value="6">6 — Account Details</option>
+            <option value="7">7 — Exit</option>
+          </select>
+          <div id="bankInputs" class="mini-form"></div>
+          <button class="btn console-btn" id="runBankChoice">Run Choice</button>
+          <button class="btn console-reset" id="resetBank">Restart Demo</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="hospital-demo">
+      <div class="demo-title">
+        <p class="project-number">PROJECT 03 · PYTHON OOP</p>
+        <h2>Hospital Management System</h2>
+        <p>Choice-based console-style demo for adding a patient and viewing details.</p>
+      </div>
+      <div class="console-panel">
+        <div class="console-header"><span>●</span> hospital_management.py — demo terminal</div>
+        <div class="console-output" id="hospitalOutput" role="status" aria-live="polite">
+Welcome to Hospital Management System
+1. Add Patient
+2. Show Patient Details
+3. Fees Details
+4. Exit
+
+Select an option below to continue.
+        </div>
+        <div class="console-controls">
+          <label for="hospitalChoice">Enter choice (1–4)</label>
+          <select id="hospitalChoice">
+            <option value="1">1 — Add Patient</option>
+            <option value="2">2 — Show Patient Details</option>
+            <option value="3">3 — Fees Details</option>
+            <option value="4">4 — Exit</option>
+          </select>
+          <div id="hospitalInputs" class="mini-form"></div>
+          <button class="btn console-btn" id="runHospitalChoice">Run Choice</button>
+          <button class="btn console-reset" id="resetHospital">Restart Demo</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="solar-demo">
+      <div class="demo-title">
+        <p class="project-number">PROJECT 04 · WEB DEVELOPMENT</p>
+        <h2>Solar System Website</h2>
+        <p>A simple educational website demo. Select a planet to read about it.</p>
+      </div>
+      <div class="solar-app app-panel">
+        <div class="solar-system-illustration" aria-label="Illustration of the Sun and planets">
+          <div class="sun-orb" title="Sun">Sun</div>
+          <button class="solar-planet mercury-planet selected-solar-planet" data-solar="0" aria-label="Mercury">Me</button>
+          <button class="solar-planet venus-planet" data-solar="1" aria-label="Venus">V</button>
+          <button class="solar-planet earth-planet" data-solar="2" aria-label="Earth">E</button>
+          <button class="solar-planet mars-planet" data-solar="3" aria-label="Mars">Ma</button>
+          <button class="solar-planet jupiter-planet" data-solar="4" aria-label="Jupiter">J</button>
+          <button class="solar-planet saturn-planet" data-solar="5" aria-label="Saturn">S</button>
+          <button class="solar-planet uranus-planet" data-solar="6" aria-label="Uranus">U</button>
+          <button class="solar-planet neptune-planet" data-solar="7" aria-label="Neptune">N</button>
+        </div>
+        <div class="solar-info">
+          <p class="eyebrow" id="solarNumber">PLANET 1 OF 8</p>
+          <h3 id="solarName">Mercury</h3>
+          <p id="solarDescription">Mercury is the smallest planet and the closest planet to the Sun.</p>
+          <p class="solar-distance" id="solarDistance">Average distance from the Sun: 57.9 million km</p>
+          <div class="button-row">
+            <button class="btn secondary-btn" id="previousSolar">← Previous</button>
+            <button class="btn primary-btn" id="nextSolar">Next Planet →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>© 2026 GOKUL S | Project Demos</p></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

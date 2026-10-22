@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #f8fbff;
+  --white: #ffffff;
+  --blue: #6689ed;
+  --blue-dark: #4265ce;
+  --mint: #dff8ee;
+  --text: #26334a;
+  --muted: #68758b;
+  --border: #e5ebf5;
+  --shadow: 0 12px 35px rgba(64, 92, 145, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navbar {
+  width: 100%;
+  min-height: 76px;
+  padding: 16px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Manrope', sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.logo span,
+h1 span,
+h2 span {
+  color: var(--blue);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a.active-link {
+  color: var(--blue-dark);
+}
+
+.section {
+  padding: 82px 8%;
+  scroll-margin-top: 76px;
+}
+
+.hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background:
+    radial-gradient(ellipse at 90% 10%, #e4f8f1 0, transparent 35%),
+    radial-gradient(ellipse at 5% 90%, #e9efff 0, transparent 40%),
+    var(--bg);
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: var(--blue-dark);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1,
+.demo-heading h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(38px, 6vw, 66px);
+  line-height: 1.2;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.hero h2 {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.hero-description {
+  max-width: 620px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.hero-buttons,
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-note {
+  flex: 0 0 210px;
+  padding: 25px;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.note-icon {
+  color: var(--blue);
+  font-size: 28px;
+}
+
+.hero-note p {
+  color: var(--muted);
+}
+
+.hero-note strong {
+  color: var(--text);
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.primary-btn {
+  background: var(--blue);
+  color: white;
+}
+
+.primary-btn:hover {
+  background: var(--blue-dark);
+}
+
+.secondary-btn {
+  background: white;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.secondary-btn:hover {
+  background: var(--mint);
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-heading h2,
+.demo-title h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.section-intro {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.about-card,
+.contact-card {
+  background: var(--white);
+  padding: 35px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.about-card h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 23px;
+  margin-bottom: 14px;
+}
+
+.about-card > p {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 28px;
+}
+
+.fact {
+  padding: 18px;
+  background: #f5f8ff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.fact span {
+  color: var(--blue-dark);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.fact p {
+  margin-top: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  padding: 22px 14px;
+  text-align: center;
+  font-weight: 700;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(64, 92, 145, 0.04);
+}
+
+.skill-card:hover {
+  background: var(--mint);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  min-width: 0;
+  padding: 28px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.project-number {
+  color: var(--blue-dark);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.project-card h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 21px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.project-card > p:not(.project-number) {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.tag {
+  display: inline-block;
+  margin: 4px 5px 0 0;
+  padding: 6px 11px;
+  background: var(--mint);
+  color: #28735c;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.center-action {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact-card {
+  max-width: 700px;
+}
+
+.contact-card > p {
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.email-address {
+  margin-top: 16px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  padding: 24px 8%;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  background: white;
+  border-top: 1px solid var(--border);
+}
+
+/* Project demo page */
+
+.demo-heading {
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+.demo-heading > p:not(.eyebrow) {
+  max-width: 720px;
+  color: var(--muted);
+  margin: 0 auto 22px;
+}
+
+.demo-heading h1 {
+  margin-bottom: 16px;
+}
+
+.demo-section {
+  padding-top: 45px;
+}
+
+.demo-title {
+  margin-bottom: 25px;
+}
+
+.demo-title h2 {
+  font-size: clamp(25px, 3.5vw, 34px);
+  margin-bottom: 10px;
+}
+
+.demo-title > p:not(.project-number) {
+  color: var(--muted);
+}
+
+.app-panel {
+  overflow: hidden;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  max-width: 850px;
+}
+
+.tax-app {
+  margin: 0 auto;
+}
+
+.app-topbar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 14px 18px;
+  background: #f0f4fc;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.app-topbar strong {
+  margin-left: 10px;
+}
+
+.window-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #aab8d2;
+}
+
+.app-body {
+  padding: 28px;
+}
+
+.app-body label,
+.console-controls label {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.app-body input,
+.console-controls select,
+.mini-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d9e2f1;
+  border-radius: 10px;
+  background: white;
+  color: var(--text);
+  outline-color: var(--blue);
+}
+
+.app-body .button-row {
+  margin-top: 16px;
+}
+
+.result-box {
+  margin-top: 20px;
+  padding: 17px;
+  background: #f4f7ff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  white-space: pre-line;
+}
+
+.demo-disclaimer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+/* Console-style bank and hospital demos */
+
+.console-panel {
+  max-width: 900px;
+  overflow: hidden;
+  background: #111827;
+  color: #d7e5f3;
+  border-radius: 18px;
+  border: 1px solid #263449;
+  box-shadow: var(--shadow);
+}
+
+.console-header {
+  padding: 13px 18px;
+  background: #1c2738;
+  color: #d7e5f3;
+  font: 600 13px monospace;
+  border-bottom: 1px solid #344256;
+}
+
+.console-header span {
+  color: #8ce1b7;
+  margin-right: 9px;
+}
+
+.console-output {
+  min-height: 185px;
+  padding: 22px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: 14px/1.8 Consolas, 'Courier New', monospace;
+  color: #c7f9d4;
+}
+
+.console-controls {
+  padding: 20px;
+  border-top: 1px solid #344256;
+  background: #182233;
+}
+
+.console-controls label {
+  color: #e2e8f0;
+}
+
+.console-controls select,
+.mini-form input {
+  margin-bottom: 14px;
+  background: #111827;
+  color: #e5edf7;
+  border-color: #42516a;
+}
+
+.mini-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mini-form label {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 12px;
+}
+
+.mini-form input {
+  margin-bottom: 8px;
+}
+
+.console-btn {
+  background: #8ce1b7;
+  color: #10251b;
+}
+
+.console-btn:hover {
+  background: #b0f1ce;
+}
+
+.console-reset {
+  background: transparent;
+  border-color: #56657a;
+  color: #e5edf7;
+}
+
+.console-controls .btn {
+  margin: 8px 8px 0 0;
+}
+
+/* Simple Solar System website demo */
+
+.solar-app {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.solar-system-illustration {
+  min-height: 235px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  background: radial-gradient(circle at center, #f1f4ff, #e9f8f4);
+}
+
+.sun-orb {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffd36b;
+  color: #654615;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 0 28px #ffe6a1;
+}
+
+.solar-planet {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  color: #172238;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 3px 10px rgba(35, 55, 90, 0.15);
+}
+
+.solar-planet.selected-solar-planet {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.mercury-planet { background: #a8abb2; }
+.venus-planet { background: #e5bd88; }
+.earth-planet { background: #70b9f4; }
+.mars-planet { background: #e78363; }
+.jupiter-planet { background: #d8b18b; }
+.saturn-planet { background: #e4d09c; }
+.uranus-planet { background: #9bdfe2; }
+.neptune-planet { background: #6e8df2; }
+
+.solar-info {
+  padding: 28px;
+}
+
+.solar-info h3 {
+  font: 800 30px 'Manrope', sans-serif;
+  margin-bottom: 8px;
+}
+
+.solar-info > p:not(.eyebrow) {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.solar-distance {
+  font-size: 13px;
+}
+
+.solar-info .button-row {
+  margin-top: 20px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 15px 5%;
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .section {
+    padding: 65px 5%;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-note {
+    flex-basis: auto;
+    width: min(100%, 300px);
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 10px 14px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .section {
+    padding: 50px 5%;
+  }
+
+  .hero {
+    min-height: 430px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .about-card,
+  .contact-card,
+  .project-card,
+  .app-body,
+  .solar-info {
+    padding: 22px;
+  }
+
+  .facts,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    gap: 10px;
+  }
+
+  .skill-card {
+    padding: 16px 8px;
+    font-size: 13px;
+  }
+
+  .mini-form {
+    grid-template-columns: 1fr;
+  }
+
+  .console-output {
+    font-size: 12px;
+    padding: 16px;
+  }
+
+  .solar-system-illustration {
+    gap: 12px;
+  }
+}
