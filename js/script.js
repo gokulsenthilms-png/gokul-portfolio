@@ -236,3 +236,42 @@ function updateActiveNav() {
 
 window.addEventListener("scroll", updateActiveNav);
 window.addEventListener("load", updateActiveNav);
+/* DARK MODE TOGGLE */
+const themeToggle = document.getElementById("themeToggle");
+const savedTheme = localStorage.getItem("portfolioTheme");
+
+if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+}
+
+function updateThemeButton() {
+    if (!themeToggle) return;
+
+    const isDark = document.body.classList.contains("dark-mode");
+
+    themeToggle.textContent = isDark
+        ? "☀️ Light Mode"
+        : "🌙 Dark Mode";
+
+    themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Switch to light mode" : "Switch to dark mode"
+    );
+}
+
+if (themeToggle) {
+    updateThemeButton();
+
+    themeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        const isDark = document.body.classList.contains("dark-mode");
+
+        localStorage.setItem(
+            "portfolioTheme",
+            isDark ? "dark" : "light"
+        );
+
+        updateThemeButton();
+    });
+}
